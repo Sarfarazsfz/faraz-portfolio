@@ -1,19 +1,21 @@
 /* Projects Component Styles */
 .projects-grid {
     display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* wider cards */
     gap: 1.5rem;
 }
 
 .project-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 0.875rem;
+    border-radius: 1rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
+/* Header */
 .project-header {
     margin-bottom: 1rem;
 }
@@ -36,7 +38,7 @@
 .project-year-badge {
     font-size: 0.75rem;
     padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
+    border-radius: 0.375rem;
     white-space: nowrap;
     background: var(--accent-dim);
     color: var(--accent);
@@ -47,6 +49,7 @@
     color: var(--text-muted);
 }
 
+/* Description */
 .project-description {
     flex-grow: 1;
 }
@@ -69,15 +72,68 @@
     margin-top: 0.25rem;
 }
 
+/* Live Demo Section */
+.project-demo {
+    margin-top: 1rem;
+}
+
+.project-demo-link {
+    display: inline-block;
+    padding: 0.45rem 1rem;
+    background: #38bdf8;
+    color: #0f172a;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.25s ease;
+}
+
+.project-demo-link:hover {
+    background: #0ea5e9;
+}
+
+.project-demo-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #94a3b8;
+    white-space: nowrap; /* keeps it in one line */
+}
+
 /* Responsive Grid */
 @media (min-width: 768px) {
     .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
     .projects-grid {
-        grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     }
 }
+.project-demo-link {
+    display: inline-block;
+    margin-top: 0.9rem;
+    padding: 0.45rem 1rem;
+
+    background: #ffffff;          /* white button */
+    color: #1f2937;               /* dark grey text */
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    border: 1px solid #e5e7eb;    /* subtle grey border */
+    border-radius: 0.875rem;
+
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.project-demo-link:hover {
+    background: #f3f4f6;          /* light grey hover */
+    color: #111827;               /* near-black text */
+    border-color: #d1d5db;
+    transform: translateY(-1px);
+}
+

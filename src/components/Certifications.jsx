@@ -28,9 +28,17 @@ export default function Certifications() {
                                 </p>
                             )}
 
-                            <p className="certification-link">
-                                {cert.link}
-                            </p>
+                            {cert.link && (
+  <a
+    href={cert.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="certification-link"
+  >
+    View Certificate
+  </a>
+)}
+
                         </div>
                     ))}
                 </div>

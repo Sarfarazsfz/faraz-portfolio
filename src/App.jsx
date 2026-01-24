@@ -32,6 +32,8 @@ export default function App() {
 
         <Certifications />
         <div className="section-divider"></div>
+        <Contact />
+        <div className="section-divider"></div>
       </main>
       <Footer />
     </>

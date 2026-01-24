@@ -13,6 +13,7 @@
     padding: 2rem;
 }
 
+/* Header */
 .certification-header {
     display: flex;
     justify-content: space-between;
@@ -43,9 +44,30 @@
     color: var(--text-secondary);
 }
 
+/* View Certificate Button (Radius matches card) */
 .certification-link {
-    font-size: 0.75rem;
-    color: var(--text-muted);
+    display: inline-block;
+    margin-top: 0.9rem;
+    padding: 0.45rem 1rem;
+
+    background: #ffffff;
+    color: #1f2937;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 0.875rem; /* ✅ SAME AS CARD */
+
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.certification-link:hover {
+    background: #f3f4f6;
+    color: #111827;
+    border-color: #d1d5db;
+    transform: translateY(-1px);
 }
 
 /* Responsive Grid */

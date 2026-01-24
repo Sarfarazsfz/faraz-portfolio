@@ -44,49 +44,52 @@ const portfolioData = {
     ],
 
     projects: [
-        {
-            title: "JobMatch AI – Intelligent Job Tracking Solution",
-            tech: ["React.js", "Node.js", "Fastify", "Google Gemini", "Redis"],
-            year: "January 2026",
-            description: [
-                "Built a full-stack job tracking platform that fetches real-time job listings and matches them with user resumes using AI-based scoring.",
-                "Implemented resume–job matching logic using Google Gemini API with Redis caching, reducing job search time by 60%.",
-                "Developed filters and application tracking, and deployed the project on Vercel and Render with end-to-end functionality. Live Demo"
-            ]
-        },
-        {
-            title: "WanderLust – Vacation Rental Marketplace",
-            tech: ["Node.js", "Express.js", "MongoDB", "React.js", "Mapbox", "Cloudinary"],
-            year: "2025",
-            description: [
-                "Built a full-stack vacation rental marketplace using Node.js, Express, MongoDB, and React with complete CRUD functionality following MVC architecture.",
-                "Implemented user authentication using Passport.js and bcrypt, handling bugs and edge cases during development with mentor guidance.",
-                "Integrated Mapbox for location-based property search and Cloudinary for image handling, and deployed the application with end-to-end functionality. Live Demo"
-            ]
-        },
-        {
-            title: "Cloudify – Weather Application",
-            tech: ["React.js", "OpenWeather API"],
-            year: "2025",
-            description: [
-                "Built a weather application while learning React fundamentals, focusing on components, state management, and event handling.",
-                "Integrated OpenWeather API to fetch and display real-time weather data based on user input, using React state and functions. Live Demo"
-            ]
-        }
+    {
+        title: "JobMatch AI – Intelligent Job Tracking Solution",
+        tech: ["React.js", "Node.js", "Fastify", "Google Gemini", "Redis"],
+        year: "January 2026",
+        description: [
+        "Built a full-stack job tracking platform that fetches real-time job listings and matches them with user resumes using AI-based scoring.",
+        "Implemented resume–job matching logic using Google Gemini API with Redis caching, reducing job search time by 60%.",
+        "Developed filters and application tracking, and deployed the project on Vercel and Render with end-to-end functionality."
+        ],
+        demoText: "Live demo available upon request"
+    },
+    {
+        title: "WanderLust – Vacation Rental Marketplace",
+        tech: ["Node.js", "Express.js", "MongoDB", "React.js", "Mapbox", "Cloudinary"],
+        year: "2025",
+        description: [
+        "Built a full-stack vacation rental marketplace using Node.js, Express, MongoDB, and React with complete CRUD functionality following MVC architecture.",
+        "Implemented user authentication using Passport.js and bcrypt, handling bugs and edge cases during development with mentor guidance.",
+        "Integrated Mapbox for location-based property search and Cloudinary for image handling, and deployed the application with end-to-end functionality."
     ],
+        demoLink: "https://wanderlust-xz5o.onrender.com/"
+    },
+    {
+        title: "Cloudify – Weather Application",
+        tech: ["React.js", "OpenWeather API"],
+        year: "2025",
+        description: [
+        "Built a weather application while learning React fundamentals, focusing on components, state management, and event handling.",
+        "Integrated OpenWeather API to fetch and display real-time weather data based on user input, using React state and functions."
+    ],
+        demoLink: "https://cloudify-n776.onrender.com/"
+    }
+],
 
     certifications: [
         {
             title: "Delta – Full Stack Web Development (MERN Stack)",
             issuer: "Apna College",
             date: "Jan 2026",
-            link: "View Certificate"
+            link: "https://media.licdn.com/dms/image/v2/D562DAQFtCI-sSvcQkw/profile-treasury-document-images_480/B56ZvLVKrbKMAk-/1/1768642884253?e=1770249600&v=beta&t=1lAuaeZahN6BqSzqqwSGC5COWlv75SCXVtzDTee2ew4"
         },
         {
             title: "Enterprise Database Administration Using IBM DB2 and SQL",
             issuer: "",
             date: "Mar 2025",
-            link: "View Certificate"
+            link: "https://media.licdn.com/dms/image/v2/D5622AQE8kKDIOvv6Rw/feedshare-shrink_800/B56ZncS0bCHkAg-/0/1760337560064?e=1770854400&v=beta&t=kwkkaZvQh26PJixta0_1prq_BE4ELI8CnrT5pNLFlwY"
         }
     ]
 };

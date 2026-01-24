@@ -1,13 +1,21 @@
-/* Contact Component Styles */
-.contact-container {
-    max-width: 28rem;
+/* Wrapper aligns content similar to other sections */
+.contact-wrapper {
+    display: flex;
+    justify-content: flex-start;
 }
 
+/* Card container */
+.contact-container {
+    max-width: 42rem;
+}
+
+/* Intro text */
 .contact-intro {
     margin-bottom: 2rem;
     color: var(--text-secondary);
 }
 
+/* Links layout */
 .contact-links {
     display: flex;
     flex-direction: column;
@@ -18,8 +26,8 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
     transition: all 0.2s ease;
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -30,7 +38,7 @@
 .contact-link:hover {
     border-color: var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .contact-icon {

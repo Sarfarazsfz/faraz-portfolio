@@ -13,6 +13,7 @@ export default function Projects() {
                 <div className="projects-grid">
                     {projects.map((project, index) => (
                         <div key={index} className="project-card">
+                            
                             {/* Project Header */}
                             <div className="project-header">
                                 <div className="project-title-row">
@@ -41,6 +42,27 @@ export default function Projects() {
                                     ))}
                                 </ul>
                             </div>
+
+                            {/* 🔥 LIVE DEMO SECTION (ADD THIS) */}
+                            <div className="project-demo">
+                                {project.demoLink && (
+                                    <a
+                                        href={project.demoLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="project-demo-link"
+                                    >
+                                        Live Demo
+                                    </a>
+                                )}
+
+                                {project.demoText && (
+                                    <span className="project-demo-text">
+                                        {project.demoText}
+                                    </span>
+                                )}
+                            </div>
+
                         </div>
                     ))}
                 </div>
