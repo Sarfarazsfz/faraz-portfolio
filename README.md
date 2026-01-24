@@ -160,7 +160,7 @@ Passionate about building scalable web applications and solving complex problems
 
 ### Connect With Me
 
-- 📧 **Email:** your.email@example.com
+- 📧 **Email:** mdsarfarazalam669@gmail.com
 - 💼 **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/faraz4237)
 - 🐙 **GitHub:** [github.com/yourusername](https://github.com/SarfarazSfz)
 - 💻 **LeetCode:** [leetcode.com/yourprofile](https://leetcode.com/faraz4237)
