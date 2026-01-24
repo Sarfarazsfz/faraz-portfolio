@@ -1,16 +1,77 @@
-# React + Vite
+# Personal Portfolio – Md Sarfaraz Alam
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains my personal portfolio website built to showcase my projects, technical skills, certifications, and contact information in a clear and professional format.
 
-Currently, two official plugins are available:
+Live Website:
+https://faraz-portfolio-topaz.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio is designed for recruiters and hiring managers to quickly understand:
+- What I build
+- The technologies I work with
+- The projects I have implemented
+- How to contact me
 
-## Expanding the ESLint configuration
+The focus is on clarity, performance, and clean UI rather than heavy design elements.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+Frontend:
+- React.js
+- JavaScript (ES6)
+- CSS
+
+Build Tool:
+- Vite
+
+Deployment:
+- Vercel
+
+Version Control:
+- Git and GitHub
+
+---
+
+## Website Sections
+
+### Introduction
+Basic profile information including role, location, and quick links to GitHub, LinkedIn, LeetCode, and resume.
+
+### Professional Summary
+A short summary describing my background as a Computer Science undergraduate and my interest in full-stack and frontend development.
+
+### Technical Skills
+Organized list of skills covering:
+- Programming languages
+- Frontend and backend technologies
+- APIs and authentication
+- Databases
+- Cloud and deployment tools
+
+### Projects
+Selected real-world projects with brief descriptions and technology stacks:
+- JobMatch AI – AI-based job tracking and resume matching platform
+- WanderLust – Full-stack vacation rental marketplace (MERN)
+- Cloudify – Weather application using React and OpenWeather API
+
+### Certifications
+- Full Stack Web Development (MERN)
+- Enterprise Database Administration using IBM DB2 and SQL
+
+### Contact
+Direct links for email, LinkedIn, and GitHub.
+
+---
+
+## Local Setup
+
+To run the project locally:
+
+```bash
+npm install
+npm run dev
