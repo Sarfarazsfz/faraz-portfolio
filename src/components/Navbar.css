@@ -1,0 +1,144 @@
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    transition: all 0.3s ease;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar-default {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.navbar-scrolled {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+/* Container */
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.navbar-logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+/* Desktop Navigation */
+.navbar-desktop {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar-link {
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: var(--text-secondary);
+}
+
+.navbar-link:hover {
+    color: var(--accent);
+}
+
+/* Mobile Menu Button */
+.navbar-mobile-button {
+    display: block;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-mobile-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--text-primary);
+}
+
+/* Mobile Menu */
+.navbar-mobile-menu {
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar-mobile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.navbar-mobile-link {
+    font-size: 0.875rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .navbar-desktop {
+        display: flex;
+    }
+
+    .navbar-mobile-button {
+        display: none;
+    }
+
+    .navbar-mobile-menu {
+        display: none !important;
+    }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--accent-dim);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.theme-toggle svg {
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(20deg);
+}

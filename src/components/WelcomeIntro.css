@@ -1,0 +1,119 @@
+/* Welcome Intro Section */
+.welcome-intro {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.welcome-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Welcome Heading */
+.welcome-heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* Typing Cursor */
+.typing-cursor {
+    display: inline-block;
+    margin-left: 0.25rem;
+    animation: blink 1s step-end infinite;
+    color: var(--accent);
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-text {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.scroll-arrow {
+    color: var(--text-secondary);
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+.scroll-indicator:hover .scroll-arrow {
+    color: var(--accent);
+}
+
+/* Responsive Typography */
+@media (min-width: 640px) {
+    .welcome-heading {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .welcome-heading {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .welcome-heading {
+        font-size: 4rem;
+    }
+}

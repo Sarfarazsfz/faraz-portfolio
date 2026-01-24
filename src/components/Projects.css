@@ -1,0 +1,83 @@
+/* Projects Component Styles */
+.projects-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0.875rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-header {
+    margin-bottom: 1rem;
+}
+
+.project-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-title {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #ffffff;
+    flex: 1;
+}
+
+.project-year-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    background: var(--accent-dim);
+    color: var(--accent);
+}
+
+.project-tech {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.project-description {
+    flex-grow: 1;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.project-list-item {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.project-bullet {
+    color: var(--accent);
+    margin-top: 0.25rem;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,357 @@
+/* Hero Section Styles */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1rem;
+    background: var(--bg-primary);
+    margin: 0;
+}
+
+/* Scroll Reveal Animation States */
+.hero-hidden {
+    opacity: 0;
+    transform: translateX(-60px);
+}
+
+.hero-visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+/* Hero Card */
+.hero-card {
+    width: 100%;
+    max-width: 1152px;
+    border-radius: 1rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    min-height: 600px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.hero-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Layout Container */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Left Section - Profile */
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Profile Image Container */
+.profile-image-container {
+    margin-top: 2.5rem;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(59, 130, 246, 0.3);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    cursor: pointer;
+}
+
+.profile-image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Name */
+.hero-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Role */
+.hero-role {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #bfdbfe;
+    line-height: 1.625;
+    text-align: center;
+}
+
+/* Right Section - Contact Info */
+.hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+/* Info Rows */
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem 1.25rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.9);
+    align-items: center;
+}
+
+.info-row-phone-email {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Availability Badge */
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+}
+
+.availability-badge span:first-child {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #4ade80;
+    border-radius: 50%;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.availability-text {
+    font-weight: 500;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Info Item */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.info-item-phone-email {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-icon {
+    font-size: 1rem;
+}
+
+/* Divider */
+.divider {
+    display: none;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Social Links Container */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* Social Link Button */
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.social-icon {
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 0.75rem;
+}
+
+/* Primary Button */
+.btn-primary {
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    background: #1e40af;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+/* Secondary Button - Matches Primary Button Styling */
+.btn-secondary {
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    background: #1e40af;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .hero-card {
+        padding: 3rem;
+    }
+
+    .profile-image-container {
+        width: 13rem;
+        height: 13rem;
+    }
+
+    .hero-name {
+        font-size: 1.5rem;
+    }
+
+    .hero-role {
+        font-size: 0.875rem;
+    }
+
+    .info-row,
+    .info-row-phone-email {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-content {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .hero-left {
+        align-items: flex-start;
+    }
+
+    .profile-image-container {
+        width: 14rem;
+        height: 14rem;
+        margin-bottom: 1.5rem;
+        margin-top: 0.25rem;
+    }
+
+    .hero-name {
+        text-align: left;
+    }
+
+    .hero-role {
+        text-align: left;
+    }
+
+    .hero-right {
+        gap: 1.5rem;
+    }
+
+    .divider {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-card {
+        padding: 5rem;
+    }
+
+    .hero-content {
+        gap: 4rem;
+    }
+
+    .profile-image-container {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .hero-name {
+        font-size: 1.875rem;
+    }
+
+    .hero-role {
+        font-size: 1rem;
+    }
+}
+
+/* Section Divider */
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin: 0;
+}

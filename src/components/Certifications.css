@@ -1,0 +1,56 @@
+/* Certifications Component Styles */
+.certifications-grid {
+    max-width: 48rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.certification-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0.875rem;
+    padding: 2rem;
+}
+
+.certification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.certification-title {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1rem;
+    flex: 1;
+}
+
+.certification-date-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    background: var(--accent-dim);
+    color: var(--accent);
+}
+
+.certification-issuer {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.certification-link {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

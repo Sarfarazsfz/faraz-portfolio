@@ -1,0 +1,69 @@
+/* Experience Component Styles */
+.experience-container {
+    max-width: 42rem;
+}
+
+.experience-timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    border-left: 2px solid var(--border);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: var(--accent);
+    transform: translateX(-7px);
+}
+
+.experience-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0.875rem;
+    padding: 2rem;
+}
+
+.experience-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-duration {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--accent);
+}
+
+.experience-score-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background: var(--accent-dim);
+    color: var(--accent);
+}
+
+.experience-degree {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.experience-institution {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.experience-location {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    color: var(--text-muted);
+}
