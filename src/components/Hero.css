@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5rem 1rem;
+    padding: 4rem 1rem;
     background: var(--bg-primary);
     margin: 0;
 }
@@ -27,22 +27,23 @@
     max-width: 1152px;
     border-radius: 1rem;
     padding: 2rem;
-    background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
-    min-height: 600px;
+    background: var(--bg-card);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border);
+    min-height: auto;
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 .hero-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--card-shadow-hover);
 }
 
 /* Main Layout Container */
 .hero-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 /* Left Section - Profile */
@@ -60,16 +61,16 @@
     height: 11rem;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 1.25rem;
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(59, 130, 246, 0.3);
+    margin-bottom: 0.75rem;
+    border: 4px solid var(--bg-secondary);
+    box-shadow: var(--card-shadow);
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
     cursor: pointer;
 }
 
 .profile-image-container:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.4);
+    box-shadow: var(--card-shadow-hover);
 }
 
 .profile-image {
@@ -82,8 +83,8 @@
 .hero-name {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
     letter-spacing: -0.025em;
     text-align: center;
     white-space: nowrap;
@@ -93,7 +94,7 @@
 .hero-role {
     font-size: 0.75rem;
     font-weight: 500;
-    color: #bfdbfe;
+    color: var(--accent);
     line-height: 1.625;
     text-align: center;
 }
@@ -113,7 +114,7 @@
     flex-wrap: wrap;
     gap: 1.25rem 1.25rem;
     font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-secondary);
     align-items: center;
 }
 
@@ -122,7 +123,7 @@
     flex-wrap: wrap;
     gap: 0.75rem 1.5rem;
     font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-secondary);
 }
 
 /* Availability Badge */
@@ -132,32 +133,13 @@
     gap: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(4px);
-}
-
-.availability-badge span:first-child {
-    width: 0.5rem;
-    height: 0.5rem;
-    background: #4ade80;
-    border-radius: 50%;
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
 }
 
 .availability-text {
     font-weight: 500;
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
 }
 
 /* Info Item */
@@ -183,7 +165,7 @@
     display: none;
     width: 100%;
     height: 1px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--border);
 }
 
 /* Social Links Container */
@@ -199,9 +181,9 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.625rem 1rem;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(4px);
-    color: #ffffff;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
     border-radius: 0.5rem;
     font-size: 0.875rem;
     font-weight: 500;
@@ -210,7 +192,9 @@
 }
 
 .social-link:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--bg-card);
+    border-color: var(--accent);
+    color: var(--accent);
     transform: scale(1.05);
 }
 
@@ -230,40 +214,48 @@
 
 /* Primary Button */
 .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
     padding: 0.875rem 2rem;
     border-radius: 0.5rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    text-align: center;
     text-decoration: none;
-    background: #1e40af;
+    background: var(--accent);
     color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid transparent;
 }
 
 .btn-primary:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05);
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-/* Secondary Button - Matches Primary Button Styling */
+/* Secondary Button */
 .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
     padding: 0.875rem 2rem;
     border-radius: 0.5rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    text-align: center;
     text-decoration: none;
-    background: #1e40af;
-    color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05);
+    background: var(--bg-card);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* Responsive Styles */

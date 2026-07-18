@@ -1,3 +1,4 @@
+import { GraduationCap } from 'lucide-react';
 import portfolioData from '../data/portfolioData';
 import './Experience.css';
 
@@ -7,7 +8,7 @@ export default function Experience() {
     return (
         <section id="experience" className="section">
             <div className="container">
-                <h2 className="section-title">Education</h2>
+                <h2 className="section-title"><GraduationCap className="section-title-icon" size={28} /> Education</h2>
                 <p className="section-subtitle">My academic background</p>
 
                 <div className="experience-container">
@@ -22,11 +23,6 @@ export default function Experience() {
                                     <span className="experience-duration">
                                         {edu.duration}
                                     </span>
-                                    {edu.score && (
-                                        <span className="experience-score-badge">
-                                            {edu.score}
-                                        </span>
-                                    )}
                                 </div>
 
                                 <h4 className="experience-degree">
@@ -40,6 +36,11 @@ export default function Experience() {
                                 <p className="experience-location">
                                     {edu.location}
                                 </p>
+                                {edu.score && (
+                                    <p className="experience-location" style={{ marginTop: '0.25rem' }}>
+                                        {edu.score}
+                                    </p>
+                                )}
                             </div>
                         </div>
                     ))}

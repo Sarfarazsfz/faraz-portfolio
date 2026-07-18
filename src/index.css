@@ -11,15 +11,18 @@
 ============================================ */
 
 :root {
-  --bg-primary: #000000;
-  --bg-secondary: #0a0a0a;
-  --bg-card: #1b1f23;
+  --bg-primary: #0B1220;
+  --bg-secondary: #0F172A;
+  --bg-card: #111C2E;
   --text-primary: #E5E7EB;
-  --text-secondary: #9CA3AF;
-  --text-muted: #6B7280;
-  --accent: #ffffff;
-  --accent-dim: rgba(255, 255, 255, 0.1);
-  --border: #2d333b;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --accent: #4F8CFF;
+  --accent-dim: rgba(79, 140, 255, 0.1);
+  --border: rgba(148, 163, 184, 0.14);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.6);
+  --bg-hover: #17253A;
 }
 
 /* Light Mode Variables */
@@ -33,6 +36,9 @@
   --accent: #1f2937;
   --accent-dim: rgba(0, 0, 0, 0.05);
   --border: #e5e7eb;
+  --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+  --bg-hover: #e5e7eb;
 }
 
 * {
@@ -100,7 +106,7 @@ a {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 4rem 0;
   background: var(--bg-primary);
 }
 
@@ -127,9 +133,10 @@ a {
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 0.875rem;
+  border-radius: 1rem;
   padding: 2rem;
   color: var(--text-primary);
+  box-shadow: var(--card-shadow);
 }
 
 .card h3,
@@ -187,10 +194,18 @@ a {
 
 /* Section Title */
 .section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
+}
+
+.section-title-icon {
+  color: #3b82f6;
+  flex-shrink: 0;
 }
 
 .section-subtitle {

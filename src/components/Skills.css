@@ -1,58 +1,160 @@
 /* Skills Component Styles */
 .skills-grid {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
-/* Category Card */
+/* Category Card Base */
 .skill-category-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 0.875rem;
+    border-radius: 1rem;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] .skill-category-card {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Elegant Hover States */
+
+/* Hover: General Dark & Light unified as per requirements */
+.skill-category-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Light Mode Hover */
+[data-theme="light"] .skill-category-card:hover {
+    background: #1e293b; /* Dark charcoal */
+    border-color: rgba(255, 255, 255, 0.2); /* Slightly brighter border against dark bg */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+/* Dark Mode Hover */
+[data-theme="dark"] .skill-category-card:hover {
+    background: #0b111d; /* Slightly darker than card #111c2e */
+    border-color: rgba(255, 255, 255, 0.15); /* More visible border */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Header */
+.skill-category-header {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.skill-category-icon {
+    color: var(--text-secondary);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Icon becomes accent blue on hover */
+.skill-category-card:hover .skill-category-icon {
+    color: #3b82f6; /* Accent blue */
+    transform: scale(1.1);
 }
 
 .skill-category-title {
     color: var(--text-primary);
     font-weight: 600;
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
+    font-size: 1.125rem;
+    margin: 0;
+    transition: color 0.3s ease;
 }
 
-/* Tags Container */
-.skill-tags {
+/* Text turns white on hover in both modes */
+.skill-category-card:hover .skill-category-title {
+    color: #ffffff;
+}
+
+/* Explicit Light Mode text fix */
+[data-theme="light"] .skill-category-card:hover .skill-category-title {
+    color: #F8FAFC;
+}
+
+/* Divider */
+.skill-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0 0 1.25rem 0;
+    transition: border-color 0.3s ease;
+}
+
+/* Divider becomes subtle against dark hover bg */
+.skill-category-card:hover .skill-divider {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* List Container */
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 1.15rem; /* Identical vertical spacing */
+    flex: 1; /* Take remaining space so empty areas are distributed */
 }
 
-/* Skill Tag — SAME DESIGN LANGUAGE AS "View Certificate" */
-.skill-tag {
-    font-size: 0.75rem;
-    padding: 0.4rem 0.85rem;
-
-    background: var(--bg-secondary);     /* ✅ works in dark & light */
-    color: var(--text-primary);          /* ✅ always visible */
-
-    font-weight: 500;
-    cursor: default;
-
-    border: 1px solid var(--border);
-    border-radius: 0.875rem;             /* same as cards & buttons */
-
-    transition: all 0.25s ease;
+/* Skill Item */
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 400; /* Regular weight */
+    line-height: 1.5; /* Comfortable line spacing */
+    transition: color 0.3s ease, transform 0.25s ease;
 }
 
-/* Hover — professional & subtle */
-.skill-tag:hover {
-    background: var(--bg-card);          /* slightly darker/lighter */
-    color: var(--text-primary);          /* 🔒 stays BLACK / readable */
-    border-color: var(--border);
-    transform: translateY(-1px);
+/* Item turns white on hover */
+.skill-category-card:hover .skill-item {
+    color: #F8FAFC;
 }
 
-/* Responsive Grid */
-@media (min-width: 768px) {
+/* Ensure inner spans inherit the hover color correctly */
+.skill-category-card:hover .skill-item span {
+    color: #F8FAFC;
+}
+
+[data-theme="light"] .skill-category-card:hover .skill-item,
+[data-theme="light"] .skill-category-card:hover .skill-item span {
+    color: #F8FAFC !important; /* Force override of any global light mode text colors */
+}
+
+.skill-item:hover {
+    transform: translateX(4px);
+    color: #ffffff !important;
+}
+
+/* Skill Item Icon */
+.skill-item-icon {
+    color: var(--text-secondary);
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+/* Skill icon becomes accent blue on hover */
+.skill-category-card:hover .skill-item-icon {
+    color: #3b82f6;
+}
+
+[data-theme="light"] .skill-category-card:hover .skill-item-icon,
+[data-theme="light"] .skill-category-card:hover .skill-category-icon {
+    color: #60A5FA !important;
+}
+
+/* Responsive Grid - Equal spacing */
+@media (min-width: 640px) {
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -60,6 +162,10 @@
 
 @media (min-width: 1024px) {
     .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .skill-category-card {
+        padding: 1.75rem;
     }
 }

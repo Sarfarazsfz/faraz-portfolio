@@ -17,8 +17,8 @@
 
 /* Links layout */
 .contact-links {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
 }
 
@@ -26,9 +26,9 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1.25rem;
-    border-radius: 0.75rem;
-    transition: all 0.2s ease;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
     background: var(--bg-card);
     border: 1px solid var(--border);
     text-decoration: none;
@@ -38,7 +38,7 @@
 .contact-link:hover {
     border-color: var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--card-shadow-hover);
 }
 
 .contact-icon {

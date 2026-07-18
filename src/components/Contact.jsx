@@ -1,6 +1,6 @@
+import { Mail } from 'lucide-react';
 import portfolioData from '../data/portfolioData';
-import { MdEmail } from 'react-icons/md';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { LuMail, LuLinkedin, LuGithub } from 'react-icons/lu';
 import './Contact.css';
 
 const { personal } = portfolioData;
@@ -9,7 +9,7 @@ export default function Contact() {
     return (
         <section id="contact" className="section">
             <div className="container">
-                <h2 className="section-title">Contact</h2>
+                <h2 className="section-title"><Mail className="section-title-icon" size={28} /> Contact</h2>
                 <p className="section-subtitle">Let's connect</p>
 
                 <div className="contact-wrapper">
@@ -27,7 +27,7 @@ export default function Contact() {
                                 className="contact-link"
                             >
                                 <span className="contact-icon">
-                                    <MdEmail size={20} />
+                                    <LuMail size={20} />
                                 </span>
                                 <div>
                                     <div className="contact-label">Email</div>
@@ -43,7 +43,7 @@ export default function Contact() {
                                 className="contact-link"
                             >
                                 <span className="contact-icon">
-                                    <FaLinkedin size={20} />
+                                    <LuLinkedin size={20} />
                                 </span>
                                 <div>
                                     <div className="contact-label">LinkedIn</div>
@@ -61,7 +61,7 @@ export default function Contact() {
                                 className="contact-link"
                             >
                                 <span className="contact-icon">
-                                    <FaGithub size={20} />
+                                    <LuGithub size={20} />
                                 </span>
                                 <div>
                                     <div className="contact-label">GitHub</div>
