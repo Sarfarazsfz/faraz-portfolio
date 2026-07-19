@@ -94,6 +94,21 @@ const portfolioData = {
             featured: true
         },
         {
+            title: "Student Course Portal",
+            shortDescription: "Angular-based Student Portal",
+            image: "https://placehold.co/800x450/1e293b/ffffff?text=Student+Course+Portal",
+            tech: ["Angular 20", "TypeScript", "RxJS", "NgRx", "Angular Material"],
+            year: "2026",
+            description: [
+                "Developed a student portal with course browsing, enrollment, and profile management.",
+                "Implemented Angular Routing, Reactive Forms, Route Guards, and HTTP Client integration.",
+                "Utilized NgRx for state management and Jasmine/Karma for unit testing with a JSON Server."
+            ],
+            demoLink: "https://cognizant-dn-5-dot-net-fse-deepskil.vercel.app/",
+            githubLink: "https://github.com/Sarfarazsfz/Cognizant-DN5-DotNetFSE-Deepskilling/tree/main/Week-5-Angular/Angular_HandsOn/Sarfaraz/student-course-portal",
+            featured: false
+        },
+        {
             title: "VectorShift",
             shortDescription: "Visual drag-and-drop pipeline builder",
             image: "https://placehold.co/800x450/1e293b/ffffff?text=VectorShift",
